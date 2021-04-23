@@ -87,4 +87,25 @@ A	600
 A	750
 B	750
 
-.
+
+7.
+
+Найдите номера моделей и цены всех имеющихся в продаже продуктов (любого типа) производителя B (латинская буква).
+
+SELECT laptop.model, laptop.price
+FROM product JOIN laptop ON product.model = laptop.model  
+WHERE product.type = 'laptop' AND product.maker = 'B'
+UNION
+SELECT PC.model, pc.price
+FROM product JOIN pc ON product.model = pc.model  
+WHERE product.type = 'pc' AND product.maker = 'B'
+UNION
+SELECT printer.model, printer.price
+FROM product JOIN printer ON product.model = printer.model  
+WHERE product.type = 'printer' AND product.maker = 'B'
+
+model	price
+1121	850.0000
+1750	1200.0000
+
+
