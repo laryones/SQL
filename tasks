@@ -108,4 +108,19 @@ model	price
 1121	850.0000
 1750	1200.0000
 
+8.
+
+Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+
+SELECT maker
+FROM product
+WHERE type = 'pc'
+EXCEPT
+SELECT maker 
+FROM product 
+WHERE type = 'laptop'
+
+maker
+E
+
 
